@@ -1,2 +1,2 @@
 Better store all forms here.  
-C:\Users\alex\Documents\Visual FoxPro Projects  
+C:\Users\...\Documents\Visual FoxPro Projects  
