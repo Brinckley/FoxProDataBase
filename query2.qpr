@@ -1,0 +1,4 @@
+SELECT *;
+ FROM ;
+     globaltype;
+ WHERE  ( id_gtype ) NOT IN (SELECT Globaltype.id_gtype FROM globaltype, thing, deal WHERE Globaltype.id_gtype = Thing.id_globaltype AND Thing.id_deal = Deal.id_deal AND Deal.id_client = ( "6" ))

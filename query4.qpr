@@ -1,0 +1,12 @@
+SELECT Deal.id_client,;
+  SUM(Thing.teprice+Thing.tpercent*Thing.tavgmarket) AS sum1;
+ FROM ;
+     deal,;
+    thing;
+ WHERE  Deal.id_deal = Thing.id_deal;
+ GROUP BY Deal.id_client;
+ INTO CURSOR client_sum  
+ 
+SELECT Client.*;
+ FROM client_sum, client ;
+   WHERE  Client.id_client = Client_sum.id_client AND Client_sum.sum1 = (SELECT MAX(sum1) FROM client_sum)

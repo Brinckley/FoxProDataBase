@@ -1,0 +1,14 @@
+SELECT Gem.id_getype, COUNT(Gemtype.id_gtype) AS cnt1;
+ FROM ;
+     thing,;
+    gem,;
+    gemtype;
+ WHERE  Thing.id_gemtype = Gem.id_gem;
+   AND  Gem.id_getype = Gemtype.id_gtype;
+ GROUP BY Gem.id_getype;
+ INTO CURSOR gemtype_cnt  
+
+SELECT Gemtype.*, Gemtype_cnt.cnt1;
+ FROM ;
+     gemtype, gemtype_cnt ;
+ WHERE  Gemtype.id_gtype = Gemtype_cnt.id_getype AND Gemtype_cnt.cnt1 = (select max(cnt1) from gemtype_cnt)

@@ -1,0 +1,12 @@
+SELECT Thing.id_globaltype, COUNT(Thing.id_thing) AS cnt1;
+ FROM ;
+     thing;
+ GROUP BY Thing.id_globaltype;
+ INTO CURSOR glob_cnt  
+
+SELECT Globaltype.*, Glob_cnt.cnt1;
+ FROM ;
+     globaltype ;
+    INNER JOIN glob_cnt Glob_cnt ;
+   ON  Globaltype.id_gtype = Glob_cnt.id_globaltype;
+ WHERE  Glob_cnt.cnt1 = (SELECT MAX(cnt1) FROM glob_cnt)

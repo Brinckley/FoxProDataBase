@@ -1,0 +1,17 @@
+SELECT COUNT(Thing.id_deal) AS cnt1;
+ FROM ;
+     Thing,;
+    Deal;
+ WHERE  Thing.id_deal = Deal.id_deal;
+   AND  Deal.dstartdate BETWEEN {^2020/04/27} AND {^2020/07/07};
+ GROUP BY Deal.id_employee;
+ INTO CURSOR things_in_period  
+
+SELECT Deal.id_employee;
+ FROM Deal, Thing, things_in_period GROUP BY Deal.id_employee INTO CURSOR final_list;
+ WHERE Deal.id_deal = Thing.id_deal ;
+ HAVING COUNT(Thing.id_deal) > AVG(things_in_period.cnt1);
+ 
+SELECT Employee.*;
+ FROM Employee, final_list;
+ WHERE Employee.id_employee = final_list.id_employee;

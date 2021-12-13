@@ -1,0 +1,8 @@
+SELECT T1.id_thing AS thing1_id, T1.tname AS thing1_name,;
+  T2.id_thing AS thing2_id, T2.tname AS thing2_name, T1.id_deal;
+ FROM ;
+     thing T1,;
+    thing T2;
+ WHERE (  T1.id_deal IN (SELECT Deal.id_deal FROM deal WHERE Deal.id_client = ( "3" ));
+   AND  T1.id_deal = T2.id_deal );
+   AND  T1.id_thing > T2.id_thing
